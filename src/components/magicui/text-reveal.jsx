@@ -2,8 +2,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Modal, ModalTrigger } from "../ui/animated-modal";
-import ModalForm from "../shared/ModalForm";
+import { ModalTrigger } from "../ui/animated-modal";
 import AnimatedShinyText from "./animated-shiny-text";
 import { ArrowRightIcon } from "lucide-react";
 import { name, theme } from "@/constants";
@@ -37,7 +36,7 @@ export const TextRevealByWord = ({ text, className }) => {
         }
       >
         <div className="w-full flex flex-col items-center justify-center">
-          <h1 className="inline-block text-6xl max-md:text-3xl">i&apos;m</h1>
+          <h1 className="inline-block text-6xl max-md:text-3xl text-zinc-950 dark:text-white">i&apos;m</h1>
 
             <h1 className={` text-9xl max-xl:text-8xl max-sm:text-7xl [color:var(--color)]` }>
               {name}
@@ -59,29 +58,26 @@ export const TextRevealByWord = ({ text, className }) => {
           })}
         </p>
         <div className="flex items-center px-5 justify-start">
-          <Modal>
-            <motion.button
-              style={{ opacity: buttonOpacity, x: buttonX }}
-              transition={{ type: "spring", stiffness: 300, damping: 10 }}
-              className=""
-            >
-              <ModalTrigger className="group/modal-btn   cursor-none  p-0">
-                <div className="z-10 flexitems-center justify-center">
-                  <div
-                    className={cn(
-                      "group rounded-full text-base text-white transition-all ease-in border border-zinc-600/70 hover:cursor-pointer  bg-neutral-950 hover:bg-neutral-800"
-                    )}
-                  >
-                    <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-4 transition ease-out hover:[color:var(--color)] hover:duration-300 lg:text-3xl md:text-2xl">
-                      <button>👋 Say hi!</button>
-                      <ArrowRightIcon className="ml-1 size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-                    </AnimatedShinyText>
-                  </div>
+          <motion.button
+            style={{ opacity: buttonOpacity, x: buttonX }}
+            transition={{ type: "spring", stiffness: 300, damping: 10 }}
+            className=""
+          >
+            <ModalTrigger className="group/modal-btn   cursor-none  p-0">
+              <div className="z-10 flex items-center justify-center">
+                <div
+                  className={cn(
+                    "group rounded-full text-base text-white transition-all ease-in border border-zinc-600/70 hover:cursor-pointer  bg-neutral-950 hover:bg-neutral-800"
+                  )}
+                >
+                  <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-4 transition ease-out hover:[color:var(--color)] hover:duration-300 lg:text-3xl md:text-2xl">
+                    <button>👋 Say hi!</button>
+                    <ArrowRightIcon className="ml-1 size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+                  </AnimatedShinyText>
                 </div>
-              </ModalTrigger>
-            </motion.button>
-            <ModalForm />
-          </Modal>
+              </div>
+            </ModalTrigger>
+          </motion.button>
         </div>
       </div>
     </div>
@@ -92,8 +88,8 @@ const Word = ({ children, progress, range }) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
     <span className="xl:lg-3 relative mx-1 lg:mx-2.5">
-      <p className={"absolute opacity-30"}>{children}</p>
-      <motion.span style={{ opacity: opacity }} className={"text-white"}>
+      <p className="absolute opacity-30 text-zinc-400 dark:text-zinc-650">{children}</p>
+      <motion.span style={{ opacity: opacity }} className="text-zinc-950 dark:text-white">
         {children}
       </motion.span>
     </span>

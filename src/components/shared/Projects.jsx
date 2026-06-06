@@ -15,7 +15,7 @@ export default function Projects() {
   };
 
   return (
-    <div className="w-full md:w-[98%] mx-auto  max-sm:w-[98%] ">
+    <div id="projects" className="w-full md:w-[98%] mx-auto  max-sm:w-[98%] ">
       <div className="md:w-[90%] lg:w-[65%] mx-auto max-md:px-5 ">
         <h1 className="text-7xl max-xl:text-6xl max-sm:text-5xl m-5 xl:mt-32">
           Projects
@@ -25,7 +25,7 @@ export default function Projects() {
         ref={ref}
         className={`transition-all duration-500  ease-in-out ${getBlurClass()}`}
       >
-        <BentoGrid className="grid-cols-2 grid-rows-6 h-[800px] md:grid-rows-4 md:grid-cols-4 md:h-[900px] gap-2">
+        <BentoGrid className="grid-cols-2 grid-rows-3 h-[600px] md:grid-rows-4 md:grid-cols-4 md:h-[900px] gap-4">
           {projects.map((feature) => (
             <BentoCard key={feature.name} {...feature} />
           ))}

@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --main-theme: #E50914;
+    --main-theme: #06b6d4;
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
@@ -30,6 +30,8 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    --cursor-bg: rgba(9, 9, 10, 0.8);
+    --cursor-border: rgba(9, 9, 10, 0.2);
   }
 
   .dark {
@@ -57,6 +59,8 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --cursor-bg: rgba(255, 255, 255, 0.8);
+    --cursor-border: rgba(255, 255, 255, 0.4);
   }
 }
 
@@ -109,20 +113,21 @@ body {
 .default-cursor {
   width: 30px;
   height: 30px;
-  background-color: rgb(255, 255, 255, 0.8); /* Default cursor color */
+  background-color: var(--cursor-bg); /* Dynamic cursor background */
+  border: 1px solid var(--cursor-border);
   border-radius: 50%; /* Circle shape */
 }
 
 .text-cursor {
-  width: 4px;
-  height: 50px;
+  width: 4.5px;
+  height: 40px;
   background-color: var(--main-theme); /* Color for text elements */
   border-radius: 0; /* Vertical line shape */
 }
 
 .text-cursor2 {
-  width: 4px;
-  height: 100px;
+  width: 4.5px;
+  height: 80px;
   background-color: var(--main-theme); /* Color for text elements */
   border-radius: 0; /* Vertical line shape */
 }
@@ -130,7 +135,8 @@ body {
 .button-cursor{
   width: 30px;
   height: 30px;
-  background: rgb(255, 255, 255, 0.8);
+  background-color: var(--cursor-bg);
+  border: 1px solid var(--cursor-border);
 }
 
 .footer-link-cursor {

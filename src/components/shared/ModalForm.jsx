@@ -45,13 +45,24 @@ const ModalForm = () => {
 
   const formRef = useRef(null); // Use a form reference
 
-  function onSubmit() {
+  function onSubmit(data) {
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICEID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATEID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLICKEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.warn("EmailJS credentials are not configured. Submitted data:", data);
+      toast({title: 'Appreciate it! (Mock)', description: 'Message simulated. Configure EmailJS variables for real delivery.', variant:"destructive"});
+      form.reset();
+      return;
+    }
+
     emailjs
       .sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICEID,
-        import.meta.env.VITE_EMAILJS_TEMPLATEID,
+        serviceId,
+        templateId,
         formRef.current,
-        import.meta.env.VITE_EMAILJS_PUBLICKEY
+        publicKey
       )
       .then(
         () => {

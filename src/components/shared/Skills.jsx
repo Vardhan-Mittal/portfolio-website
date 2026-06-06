@@ -4,9 +4,9 @@ import { cn } from "@/lib/utils";
 import Marquee from "@/components/magicui/marquee";
 import { skills } from "@/constants";
 
-const firstRow = skills.slice(0, 6);
-const secondRow = skills.slice(6, 12);
-const thirdRow = skills.slice(12, 18);
+const firstRow = skills.slice(0, 5);
+const secondRow = skills.slice(5, 10);
+const thirdRow = skills.slice(10, 15);
 
 const ReviewCard = ({ src, title }) => {
   return (
