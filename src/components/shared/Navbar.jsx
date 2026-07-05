@@ -48,14 +48,19 @@ const Navbar = () => {
       setIsScrolled(window.scrollY > 20);
 
       // Determine active section based on scroll position
-      const scrollPosition = window.scrollY + 150; // offset for navbar height
+      const scrollPosition = window.scrollY + 180; // offset for navbar height
       
-      const sections = navLinks.map(link => document.getElementById(link.id));
-      
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(navLinks[i].id);
+      const validSections = navLinks
+        .map(link => {
+          const el = document.getElementById(link.id);
+          return el ? { id: link.id, top: el.offsetTop } : null;
+        })
+        .filter(Boolean)
+        .sort((a, b) => a.top - b.top);
+
+      for (let i = validSections.length - 1; i >= 0; i--) {
+        if (validSections[i].top <= scrollPosition) {
+          setActiveSection(validSections[i].id);
           break;
         }
       }

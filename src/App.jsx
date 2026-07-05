@@ -19,9 +19,9 @@ const App = () => {
           <Navbar />
           <TracingBeam>
             <Hero />
+            <Timeline />
             <Projects />
             <Achievements />
-            <Timeline />
             <Skills />
             <Footer />
           </TracingBeam>

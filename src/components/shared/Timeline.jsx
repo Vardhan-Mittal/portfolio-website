@@ -142,7 +142,7 @@ const Timeline = () => {
                     </BoxReveal>
                     {edu.name.includes("Delhi") && (
                       <p className="text-sm text-cyan-600 dark:text-cyan-400 mt-1 italic font-semibold">
-                        * Minor Degree - Machine Learning (May 2025 -- May 2027)
+                        * Minor Degree - Machine Learning (May 2025 - May 2027)
                       </p>
                     )}
                   </div>

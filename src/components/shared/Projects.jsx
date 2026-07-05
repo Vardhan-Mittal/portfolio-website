@@ -25,7 +25,7 @@ export default function Projects() {
         ref={ref}
         className={`transition-all duration-500  ease-in-out ${getBlurClass()}`}
       >
-        <BentoGrid className="grid-cols-2 grid-rows-3 h-[600px] md:grid-rows-4 md:grid-cols-4 md:h-[900px] gap-4">
+        <BentoGrid className="grid-cols-2 grid-rows-5 h-[1050px] md:grid-rows-6 md:grid-cols-4 md:h-[1350px] gap-4">
           {projects.map((feature) => (
             <BentoCard key={feature.name} {...feature} />
           ))}

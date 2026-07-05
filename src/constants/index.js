@@ -10,7 +10,7 @@ export const email = "logicalmittal@gmail.com";
 export const aboutMe = 
   "I'm an ECE undergraduate at NIT Delhi minoring in Machine Learning, SDE intern at Zscaler & Labmentix, and Codeforces Specialist. Passionate about building AI-driven solutions, high-performance backends, and secure cloud architectures.";
 
-export const educations = [
+export const educations = [ 
   {
     name: "National Institute of Technology Delhi",
     branch: "Bachelor of Technology - Electronics and Communication (Minor: Machine Learning)",
@@ -71,28 +71,49 @@ export const experiences = [
 
 export const projects = [
   {
+    name: "AI Interview Coach",
+    description: "AI-Powered Adaptive Mock Interview Platform. Stack: Next.js 15, Go (Gin), Gemini 2.5 Engine. Smart resume parsing, ATS compatibility analysis, 15 adaptive technical questions, and personalized improvement study roadmaps.",
+    href: "https://resumenichod.vercel.app",
+    githubUrl: "https://github.com/Vardhan-Mittal/AI-Interview-Coach",
+    cta: "🚀 Try Live Demo",
+    background: "/images/wall.jpg",
+    className: "md:col-start-1 md:col-end-5 md:row-start-1 md:row-end-3 col-start-1 col-end-3 row-start-1 row-end-2",
+  },
+  {
+    name: "DevTrack",
+    description: "Developer Command Center & Productivity Dashboard. Stack: Next.js, Vercel, Tailwind CSS. Auto-tracks Codeforces and LeetCode algorithmic stats, sprints, and generates instant AI system architectures.",
+    href: "https://devtrack-plum.vercel.app",
+    githubUrl: "https://github.com/Vardhan-Mittal/devtrack",
+    cta: "🚀 Try Live Demo",
+    background: "/images/wall5.jpg",
+    className: "md:col-start-1 md:col-end-3 md:row-start-3 md:row-end-5 col-start-1 col-end-3 row-start-2 row-end-3",
+  },
+  {
     name: "WanderWise",
     description: "AI-Powered Travel Companion. Stack: AI, React Native, JavaScript, Expo, Firebase, APIs. Cross-platform travel planner app using Gemini AI for smart itineraries, tracking, and maps.",
     href: "https://github.com/Vardhan-Mittal/WanderWise-Travel-Planner",
+    githubUrl: "https://github.com/Vardhan-Mittal/WanderWise-Travel-Planner",
     cta: "View Repository",
     background: "/images/wall4.jpg",
-    className: "md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-3 col-start-1 col-end-3 row-start-1 row-end-2",
+    className: "md:col-start-3 md:col-end-5 md:row-start-3 md:row-end-5 col-start-1 col-end-3 row-start-3 row-end-4",
   },
   {
     name: "SportSync",
     description: "Campus Sports Event Management. Stack: Next.js 13, React, Tailwind CSS, Firebase, NextAuth. Streamline coordinator and participant coordination with real-time updates and registrations.",
     href: "https://github.com/Vardhan-Mittal/SportSync",
+    githubUrl: "https://github.com/Vardhan-Mittal/SportSync",
     cta: "View Repository",
     background: "/images/gg.jpg",
-    className: "md:col-start-3 md:col-end-5 md:row-start-1 md:row-end-3 col-start-1 col-end-3 row-start-2 row-end-3",
+    className: "md:col-start-1 md:col-end-3 md:row-start-5 md:row-end-7 col-start-1 col-end-3 row-start-4 row-end-5",
   },
   {
     name: "SnapScribe",
     description: "AI Image Caption Generator. Stack: Deep Learning, Transformers (Hugging Face), Python, Gradio, PIL. BLIP model fine-tuned for generating accurate, context-aware image captions.",
     href: "https://github.com/Vardhan-Mittal/SnapScribe-AI-Image-Caption",
+    githubUrl: "https://github.com/Vardhan-Mittal/SnapScribe-AI-Image-Caption",
     cta: "View Repository",
     background: "/images/gg4.jpg",
-    className: "md:col-start-1 md:col-end-5 md:row-start-3 md:row-end-5 col-start-1 col-end-3 row-start-3 row-end-4",
+    className: "md:col-start-3 md:col-end-5 md:row-start-5 md:row-end-7 col-start-1 col-end-3 row-start-5 row-end-6",
   }
 ];
 
