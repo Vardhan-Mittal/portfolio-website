@@ -109,9 +109,9 @@ export const projects = [
   {
     name: "SnapScribe",
     description: "AI Image Caption Generator. Stack: Deep Learning, Transformers (Hugging Face), Python, Gradio, PIL. BLIP model fine-tuned for generating accurate, context-aware image captions.",
-    href: "https://github.com/Vardhan-Mittal/SnapScribe-AI-Image-Caption",
+    href: "https://snapscribe-ai.vercel.app",
     githubUrl: "https://github.com/Vardhan-Mittal/SnapScribe-AI-Image-Caption",
-    cta: "View Repository",
+    cta: "🚀 Try Live Demo",
     background: "/images/gg4.jpg",
     className: "md:col-start-3 md:col-end-5 md:row-start-5 md:row-end-7 col-start-1 col-end-3 row-start-5 row-end-6",
   }
