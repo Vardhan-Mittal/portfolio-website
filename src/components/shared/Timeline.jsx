@@ -82,8 +82,8 @@ const Timeline = () => {
                       </p>
                     </BoxReveal>
                   </div>
-                  <div className="text-right md:text-right text-left">
-                    <span className="inline-block px-3 py-1 rounded-full bg-zinc-150 dark:bg-zinc-800/60 text-cyan-600 dark:text-cyan-400 font-semibold text-sm mb-1">
+                  <div className="text-right md:text-right text-left shrink-0">
+                    <span className="inline-block px-3 py-1 rounded-full bg-zinc-150 dark:bg-zinc-800/60 text-cyan-600 dark:text-cyan-400 font-semibold text-sm mb-1 whitespace-nowrap">
                       {exp.year}
                     </span>
                     <p className="text-sm text-zinc-500">{exp.location}</p>
@@ -146,8 +146,8 @@ const Timeline = () => {
                       </p>
                     )}
                   </div>
-                  <div className="text-right md:text-right text-left">
-                    <span className="inline-block px-3 py-1 rounded-full bg-zinc-150 dark:bg-zinc-800/60 text-blue-600 dark:text-blue-400 font-semibold text-sm mb-1">
+                  <div className="text-right md:text-right text-left shrink-0">
+                    <span className="inline-block px-3 py-1 rounded-full bg-zinc-150 dark:bg-zinc-800/60 text-blue-600 dark:text-blue-400 font-semibold text-sm mb-1 whitespace-nowrap">
                       {edu.year}
                     </span>
                     <p className="text-sm text-zinc-500 mb-1">{edu.location}</p>
